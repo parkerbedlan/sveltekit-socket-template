@@ -8,10 +8,11 @@ RUN npm ci --production
 ENV NODE_ENV production
 
 COPY . .
+COPY .env.production .env
+
 # ARG DATABASE_URL
 # prisma migration here probably, or just do predeploy stuff in app.json, idk
 
-# COPY .env.production .env
 
 EXPOSE 8080
 

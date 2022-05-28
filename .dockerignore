@@ -6,3 +6,6 @@
 !.svelte-kit
 !build
 !package*.json
+!.env
+!.env.production
+# intentionally ignoring .env.local
