@@ -10,6 +10,8 @@ const server = http.createServer(app);
 // Inject SocketIO
 injectSocketIO(server);
 
+app.set('proxy', 1);
+
 // SvelteKit handlers
 app.use(handler);
 

@@ -3,6 +3,7 @@ import { Server } from 'socket.io';
 
 export default function injectSocketIO(server) {
 	const io = new Server(server);
+	io.attach(server); // probably redundant
 
 	// Socket.IO stuff goes here
 	io.on('connection', (socket) => {
