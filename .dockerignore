@@ -1,0 +1,8 @@
+# Ignore everything
+*
+# Allow necessary files
+!server.js
+!socket-handler.js
+!.svelte-kit
+!build
+!package*.json
