@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div class="h-screen w-screen bg-zinc-800">
+<div class="h-[90vh] w-full bg-zinc-800">
 	<div class="h-full w-full max-w-md mx-auto bg-zinc-500 flex flex-col">
 		<header
 			class="px-6 py-4 border-b border-zinc-800 bg-zinc-700 text-white shrink-0 flex items-center justify-between"
@@ -35,7 +35,7 @@
 			<span>{username}</span>
 		</header>
 
-		<div class="h-full w-full p-4">
+		<div class="h-full w-full p-4 overflow-y-auto">
 			{#each messages as message}
 				<div class="bg-zinc-300 rounded-xl rounded-tl-none px-4 py-3 my-4 w-fit">
 					<span class="flex items-center space-between gap-4">
