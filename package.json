@@ -1,5 +1,5 @@
 {
-	"name": "svelte-socket-test",
+	"name": "sveltekit-socket-template",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",

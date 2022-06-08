@@ -1,6 +1,9 @@
 # SvelteKit with Socket<span>.<span/>IO Template
 ### Implements and deploys [this tutorial](https://linu.us/live-chat-with-sveltekit-and-socketio) to a Dokku server.
 
+#### Before running:
+1. Create a file called `.env.local` and paste inside: `VITE_APP_ORIGIN="http://localhost:3000"`
+
 #### Steps to replicate:
 1. [`npm init svelte my-app`](https://kit.svelte.dev/docs/introduction#getting-started)
 2. [`npx svelte-add@latest tailwindcss --daisyui --forms`](https://github.com/svelte-add/tailwindcss)
@@ -11,7 +14,7 @@
 ##### Setting up the server:
 1. Create a Docker Hub repo
 2. Buy a DigitalOcean Linux Droplet with Dokku pre-installed
-3. Buy a domain from Namecheap and create an `A Record` directed towards the `<server-ip-address>` of the Droplet
+3. Buy a domain from Namecheap (e.g. `my-domain.com`) and create an `A Record` directed towards the `<server-ip-address>` of the Droplet
 4. Create a Dokku app
 	```
 	ssh root@<server-ip-address>
@@ -22,6 +25,7 @@
 	dokku letsencrypt:enable <app-name> # this automatically sets https:443:8080 if it works
 	```
 ##### Pushing to the server:
+0. Just once: Create a file called `.env.production` and inside paste: `VITE_APP_ORIGIN="http://my-domain.com"` 
 1. Containerize the code using Docker and upload to Docker Hub:
 	```
 	docker build -t <dockerhub-username>/<repo-name>:<tag-name> .
