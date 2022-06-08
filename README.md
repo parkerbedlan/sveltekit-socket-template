@@ -21,6 +21,7 @@
 	dokku apps:create <app-name>
 	dokku domains:set <app-name> my-domain.com
 	dokku proxy:ports-set <app-name> http:80:8080
+	# *Push to the server* (instructions below)
 	# first time: dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
 	dokku letsencrypt:enable <app-name> # this automatically sets https:443:8080 if it works
 	```
