@@ -3,6 +3,7 @@
 
 #### Before running:
 1. Create a file called `.env.local` and paste inside: `VITE_APP_ORIGIN="http://localhost:3000"`
+2. `npm i`
 
 #### Steps to replicate:
 1. [`npm init svelte my-app`](https://kit.svelte.dev/docs/introduction#getting-started)
@@ -26,13 +27,14 @@
 	dokku letsencrypt:enable <app-name> # this automatically sets https:443:8080 if it works
 	```
 ##### Pushing to the server:
-0. Just once: Create a file called `.env.production` and inside paste: `VITE_APP_ORIGIN="https://my-domain.com"` 
-1. Containerize the code using Docker and upload to Docker Hub:
+0. Just once: Create a file called `.env.production` and inside paste: `VITE_APP_ORIGIN="https://my-domain.com"`
+1. Build with `npm run build`
+2. Containerize the code using Docker and upload to Docker Hub:
 	```
 	docker build -t <dockerhub-username>/<repo-name>:<tag-name> .
 	docker push <dockerhub-username>/<repo-name>:<tag-name>
 	```
-2. Deploy it to your Dokku app:
+3. Deploy it to your Dokku app:
 	```
 	ssh root@<server-ip-address>
 	docker pull <dockerhub-username>/<repo-name>:<tag-name>
