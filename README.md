@@ -6,12 +6,6 @@
 2. `npm i`
 3. `npm run dev`
 
-#### Steps to replicate:
-1. [`npm init svelte my-app`](https://kit.svelte.dev/docs/introduction#getting-started)
-2. [`npx svelte-add@latest tailwindcss --daisyui --forms`](https://github.com/svelte-add/tailwindcss)
-3. Follow [this tutorial](https://linu.us/live-chat-with-sveltekit-and-socketio#heading-install-the-dependencies) from "Install the dependencies" to the end.
-4. Create a `Dockerfile` and a `.dockerignore`
-
 #### Steps to deploy:
 ##### Setting up the server:
 1. Create a Docker Hub repo
@@ -42,3 +36,9 @@
 	dokku git:from-image <app-name> <dockerhub-username>/<repo-name>:<tag-name>
 	```
 	> Note: If coding on a Windows computer, `deploy_windows.bat` will run the above pushing steps for you.
+
+#### Steps to replicate:
+1. [`npm init svelte my-app`](https://kit.svelte.dev/docs/introduction#getting-started)
+2. [`npx svelte-add@latest tailwindcss --daisyui --forms`](https://github.com/svelte-add/tailwindcss)
+3. Follow [this tutorial](https://linu.us/live-chat-with-sveltekit-and-socketio#heading-install-the-dependencies) from "Install the dependencies" to the end.
+4. Create a `Dockerfile` and a `.dockerignore`
