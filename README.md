@@ -26,7 +26,7 @@
 	dokku letsencrypt:enable <app-name> # this automatically sets https:443:8080 if it works
 	```
 ##### Pushing to the server:
-0. Just once: Create a file called `.env.production` and inside paste: `VITE_APP_ORIGIN="http://my-domain.com"` 
+0. Just once: Create a file called `.env.production` and inside paste: `VITE_APP_ORIGIN="https://my-domain.com"` 
 1. Containerize the code using Docker and upload to Docker Hub:
 	```
 	docker build -t <dockerhub-username>/<repo-name>:<tag-name> .
