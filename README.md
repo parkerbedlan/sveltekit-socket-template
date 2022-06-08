@@ -4,6 +4,7 @@
 #### Before running:
 1. Create a file called `.env.local` and paste inside: `VITE_APP_ORIGIN="http://localhost:3000"`
 2. `npm i`
+3. `npm run dev`
 
 #### Steps to replicate:
 1. [`npm init svelte my-app`](https://kit.svelte.dev/docs/introduction#getting-started)
